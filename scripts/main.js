@@ -23,9 +23,10 @@ function result() {
     var randomY = randomValueFromArray(insertY);
     var randomZ = randomValueFromArray(insertZ);
 
-    newStory = newStory.replace(':insertx:', randomX); // TODO: Find a way to do this with a single line
-    newStory = newStory.replace(':inserty:', randomY);
-    newStory = newStory.replace(':insertz:', randomZ);
+    
+    newStory = newStory.replace(/:insertx:/g, randomX);
+    newStory = newStory.replace(/:inserty:/g, randomY);
+    newStory = newStory.replace(/:insertz:/g, randomZ);
     
     if(customName.value !== '') {
         let name = customName.value;
